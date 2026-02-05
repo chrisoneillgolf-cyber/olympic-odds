@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="300">
     <title>Winter Olympics 2026 - Betting Odds Dashboard</title>
     <style>
         * {
@@ -334,7 +333,6 @@
             <h1>🏂 Winter Olympics 2026 - Betting Odds</h1>
             <div class="meta-info">
                 Last updated: February 05, 2026 at 12:41 PM
-                | Auto-refresh in <span id="countdown">5:00</span>
                 | * = Manual Entry Required
             </div>
         </header>
@@ -113937,21 +113935,6 @@ The page will automatically reload when complete.
             if (dialog) dialog.remove();
         }
 
-        // Auto-refresh countdown timer
-        let refreshSeconds = 300;
-        function updateCountdown() {
-            const mins = Math.floor(refreshSeconds / 60);
-            const secs = refreshSeconds % 60;
-            const countdown = document.getElementById('countdown');
-            if (countdown) {
-                countdown.textContent = mins + ':' + (secs < 10 ? '0' : '') + secs;
-            }
-            if (refreshSeconds > 0) {
-                refreshSeconds--;
-                setTimeout(updateCountdown, 1000);
-            }
-        }
-        updateCountdown();
     </script>
 </body>
 </html>
